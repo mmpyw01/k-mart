@@ -125,6 +125,7 @@ export const update = async (user, dispatch) => {
   dispatch((updateStart()));
   try {
     console.log("try")
+    setToken()
     const res = await userRequest.put(`/users/${user.userid}`, user);
     dispatch(updateSuccess(res));
     console.log("fin")
