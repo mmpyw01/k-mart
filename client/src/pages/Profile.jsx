@@ -67,7 +67,8 @@ const Profile = () => {
   const user = JSON.parse(JSON.parse(localStorage.getItem("persist:root"))?.user || "{}")?.currentUser;
   console.log(user)
   console.log(user.name)
-  
+  console.log(user.name)
+
   const inputs = [
     {
         id: 1,
@@ -109,7 +110,7 @@ const Profile = () => {
       errorMessage:
       "Username should be 8-16 characters and shouldn't include any special character!",
       label: "Username",
-      pattern: "^[A-Za-z0-9]{8,16}$",
+      pattern: "^[A-Za-z0-9]{1,16}$",
       required: true,
     },
   ];
@@ -120,10 +121,11 @@ const Profile = () => {
         console.log(user)
         var element = {};
         element.userid = user._id;
-        element.name = user.name;
-        element.lastname = user.lastname;
-        element.username = user.username;
-        element.email=user.email;
+        element.name = values.name;
+        element.lastname = values.lastname;
+        element.username = values.username;
+        element.email=values.email;
+        console.log("element")
         console.log(element)
         console.log("updateUser")
         update(element, dispatch);
@@ -133,6 +135,8 @@ const Profile = () => {
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
+    console.log("value")
+    console.log(values)
   };
 
   return (

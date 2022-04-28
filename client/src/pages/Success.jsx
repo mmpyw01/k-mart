@@ -28,6 +28,8 @@ const Container = styled.div`
 
 `
 const Wrapper = styled.div`
+    align-items: center;
+    justify-content: center;
     padding: 20px;
 `
 const Title = styled.h1`
@@ -142,6 +144,7 @@ const SummaryItemPrice = styled.span``
 const Button = styled.button`
     width: 500px;
     padding: 10px;
+    align-items: center;
     background-color: black;
     cursor: pointer;
     color: white;
@@ -156,9 +159,9 @@ const Success = () => {
 
   const location = useLocation()
   const dispatch = useDispatch();
-
+  let isSendInfo = 0;
   const sendInfo = () => {
-    
+    isSendInfo = 1;
     console.log("location", location);
     var element = {};
     element.userId = location.state.user.username;
@@ -197,11 +200,11 @@ const Success = () => {
             <Wrapper>
                 <div>
                     <Title>Successful</Title>
-                    {/* {sendInfo()} */}
+                    {!isSendInfo && sendInfo()}
                     <br></br>
-                    <Button onClick={sendInfo}>
+                    {/* <Button onClick={sendInfo}>
                         Confirmation
-                    </Button>
+                    </Button> */}
                     <br></br>
                     <Button onClick={handleClick}>
                         Go to Home

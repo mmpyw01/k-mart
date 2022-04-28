@@ -91,30 +91,30 @@ const TradeList = () => {
       <h2>Your post</h2>
       <FilterContainer>
         <Filter>
-          <FilterText>Filter:</FilterText>
           <Select name="band" onChange={handleFilters}>
-            <Option disabled>
-              Band
-            </Option>
-            <Option>--</Option>
-            <Option>SKZ</Option>
-            <Option>kjh</Option>
-            <Option>red</Option>
-            <Option>blue</Option>
-            <Option>yellow</Option>
-            <Option>green</Option>
-          </Select>
-          <Select name="artist" onChange={handleFilters}>
-            <Option disabled>
-              Size
-            </Option>
-            <Option>--</Option>
-            <Option>Felix</Option>
-            <Option>wer</Option>
-            <Option>M</Option>
-            <Option>L</Option>
-            <Option>XL</Option>
-          </Select>
+              <Option disabled>
+                Band
+              </Option>
+              <Option>--</Option>
+              <Option>BLACKPINK</Option>
+              <Option>BTS</Option>
+              <Option>EXO</Option>
+              <Option>NCT</Option>
+              <Option>RED VELVET</Option>
+              <Option>TWICE</Option>
+              <Option>AESPA</Option>
+              <Option>Stray Kids</Option>
+            </Select>
+            <Select name="artist" onChange={handleFilters}>
+              <Option disabled>
+                Artist
+              </Option>
+              <Option>--</Option>
+              <Option>Felix</Option>
+              <Option>Winter</Option>
+              <Option>Sungchan</Option>
+              <Option>Karina</Option>
+            </Select>
         </Filter>
         <Filter>
           <FilterText>Sort:</FilterText>

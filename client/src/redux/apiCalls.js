@@ -113,7 +113,7 @@ export const addOrder = async (order, dispatch) => {
     //setToken()
     const res = await publicRequest.post(`/orders`, order);
     dispatch(addOrderSuccess(res));
-    console.log("fin")
+    console.log("fin add order")
   } catch (err) {
     dispatch(addOrderFailure());
     console.log("Failed add order")
